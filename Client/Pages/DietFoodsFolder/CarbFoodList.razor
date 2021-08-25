@@ -1,0 +1,222 @@
+﻿@page "/CarbFoodlist"
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+    body { font-family: 'Yanone Kaffeesatz', sans-serif; background-image: url("https://images.unsplash.com/photo-1590005354167-6da97870c757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); 
+           background-repeat: no-repeat; 
+           background-size: 100% 100%; }
+
+
+        .header {
+            color: #161111;
+            text-align: center;
+            font-size: 35px;
+            text-decoration: underline rgb(49, 49, 49);
+        }
+
+        .column {
+            float: right;
+            width: 30%;
+            padding: 10px 10px;
+        }
+
+        .row {
+            margin: 10px 10px;
+        }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        @@media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .card {
+            margin: 1rem;
+            width: 300px;
+            height: 500px;
+            padding: .5rem 1rem;
+            background-image: url("https://images.unsplash.com/photo-1532153259564-a5f24f261f51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            color: rgba(255, 225, 170, 0.788);
+            border-radius: 8px;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .card:hover {
+                box-shadow: 3px 3px 3px 3px rgba(255, 225, 170, 0.788);
+            }
+
+        h1 {
+            font-family: 'Allura', cursive;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>The Ultimate Low Carb Food List</title>
+</head>
+<body>
+    <div class="header">
+        <h2>The Ultimate Low Carb Food List</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">VEGETABLES</h2>
+                <ul>
+                    <li>Artichokes</li>
+                    <li>Avocado</li>
+                    <li>Broccoli</li>
+                    <li>Cauliflower</li>
+                    <li>Cucumber</li>
+                    <li>Eggplant</li>
+                    <li>Garlic</li>
+                    <li>Green Beans</li>
+                    <li>Kale</li>
+                    <li>Leeks</li>
+                    <li>Lettuce</li>
+                    <li>Mushrooms</li>
+                    <li>Pumpkin</li>
+                    <li>Radish</li>
+                    <li>Tomatoes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">PROTEIN</h2>
+                <ul>
+                    <li>Bacon</li>
+                    <li>Beef</li>
+                    <li>Chicken</li>
+                    <li>Crab</li>
+                    <li>Duck</li>
+                    <li>Eggs</li>
+                    <li>Lobster</li>
+                    <li>Mussels</li>
+                    <li>Rabbit</li>
+                    <li>Salmon</li>
+                    <li>Shrimp</li>
+                    <li>Tuna</li>
+                    <li>Turkey</li>
+                    <li>Veal</li>
+                    <li>Venison</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">OIL,NUTS&SEEDS</h2>
+                <ul>
+                    <li>Avocado oil</li>
+                    <li>Butter</li>
+                    <li>Coconut Butter</li>
+                    <li>Cocoa Butter</li>
+                    <li>Olive oil</li>
+                    <li>Mayonnaise</li>
+                    <li>Almonds</li>
+                    <li>Brazil Nuts</li>
+                    <li>Cashews</li>
+                    <li>Chia Seeds</li>
+                    <li>Hazelnuts</li>
+                    <li>Macadmia Nuts</li>
+                    <li>Pecans</li>
+                    <li>Peanuts</li>
+                    <li>Sunflower Seeds</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FRUITS</h2>
+                <ul>
+                    <li>Berries</li>
+                    <li>Lemon</li>
+                    <li>Rhubarb</li>
+                    <li>Lime</li>
+                    <li>Coconut</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FLOUR & SWEETENERS</h2>
+                <ul>
+                    <li>Almond flour</li>
+                    <li>Coconut flour</li>
+                    <li>Flax seed meal</li>
+                    <li>Nut flour</li>
+                    <li>Psyllium husk</li>
+                    <li>Unsweetened cocoa powder</li>
+                    <li>Erythritol</li>
+                    <li>Monk fruit sugar</li>
+                    <li>Xylitol</li>
+                    <li>Stevia</li>
+                    <li>Dark chocolate</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">DAIRY:FULL FAT</h2>
+                <ul>
+                    <li>Cheese</li>
+                    <li>Sour cream</li>
+                    <li>Unsweetened yogurt</li>
+                    <li>Cream</li>
+                    <li>Unsweetened almond milk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">DRINKS</h2>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Herbal tea</li>
+                    <li>Broth</li>
+                    <li>Water</li>
+                    <li>Stevia soda</li>
+                    <li>Unsweetened almond milk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">CONDIMENTS</h2>
+                <ul>
+                    <li>Apple cider vinegar</li>
+                    <li>Fish sauce</li>
+                    <li>Soy sauce</li>
+                    <li>Tabasco</li>
+                    <li>Dried herbs and spices</li>
+                    <li>Pesto</li>
+                    <li>Mustard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

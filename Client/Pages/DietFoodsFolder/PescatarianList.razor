@@ -1,0 +1,201 @@
+﻿@page "/Pescatarianlist"
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1862&q=80");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .header {
+            color: #161111;
+            text-align: center;
+            font-size: 35px;
+            text-decoration: underline rgb(49, 49, 49);
+        }
+
+        .column {
+            float: right;
+            width: 30%;
+            padding: 10px 10px;
+        }
+
+        .row {
+            margin: 10px 10px;
+        }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        @@media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .card {
+            margin: 1rem;
+            width: 300px;
+            height: 500px;
+            padding: .5rem 1rem;
+            background-image: url("https://images.unsplash.com/photo-1532153259564-a5f24f261f51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            color: rgba(255, 225, 170, 0.788);
+            border-radius: 8px;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .card:hover {
+                box-shadow: 3px 3px 3px 3px rgba(255, 225, 170, 0.788);
+            }
+
+        h1 {
+            font-family: 'Allura', cursive;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>The Ultimate Pescatarian Shopping List</title>
+</head>
+<body>
+    <div class="header">
+        <h2>The Ultimate Pescatarian Shopping List</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">VEGETABLES</h2>
+                <ul>
+                    <li>Avocado</li>
+                    <li>Beets</li>
+                    <li>Onions</li>
+                    <li>Sweet Potatoes</li>
+                    <li>Peppers</li>
+                    <li>Mushrooms</li>
+                    <li>Leafly Greens</li>
+                    <li>Carrots</li>
+                    <li>Broccoli</li>
+                    <li>Cauliflower</li>
+                    <li>Parnsips</li>
+                    <li>Tomatoes</li>
+                    <li>Squash</li>
+                    <li>Asparagus</li>
+                    <li>Cucumbers</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">COOKING</h2>
+                <ul>
+                    <li>Almond Milk</li>
+                    <li>Cashew Milk</li>
+                    <li>Coconut Milk</li>
+                    <li>Oils</li>
+                    <li>Sea Salt</li>
+                    <li>Pepper</li>
+                    <li>Vinegars</li>
+                    <li>Stevia</li>
+                    <li>Raw Maple Syrup</li>
+                    <li>Raw Honey</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">MEAT+DAIRY</h2>
+                <ul>
+                    <li>Salmon</li>
+                    <li>Halibut</li>
+                    <li>Tuna</li>
+                    <li>Shrimp</li>
+                    <li>Lobster</li>
+                    <li>Crab</li>
+                    <li>Crayfish</li>
+                    <li>Clams</li>
+                    <li>Oysters</li>
+                    <li>Scallops</li>
+                    <li>Mussels</li>
+                    <li>Eggs (optional)</li>
+                    <li>Milk (optional)</li>
+                    <li>Yogurt (optional)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FRUITS</h2>
+                <ul>
+                    <li>Oranges</li>
+                    <li>Lemons</li>
+                    <li>Limes</li>
+                    <li>Apples</li>
+                    <li>Bananas</li>
+                    <li>Plantains</li>
+                    <li>Berries</li>
+                    <li>Grapes</li>
+                    <li>Melons</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">PANTRY ITEMS</h2>
+                <ul>
+                    <li>Sprouted Grain Bread</li>
+                    <li>Brown Jasmine Rice</li>
+                    <li>Gluten Free Oats</li>
+                    <li>Quinoa</li>
+                    <li>Whole Wheat Couscous</li>
+                    <li>Risotto</li>
+                    <li>Pine Nuts</li>
+                    <li>Roasted Nuts</li>
+                    <li>Flax</li>
+                    <li>Nut Butters</li>
+                    <li>Black Eyed Peas</li>
+                    <li>Kidney Beans</li>
+                    <li>Great Northern Beans</li>
+                    <li>Olives</li>
+                    <li>Sun Dried Tomatoes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">OTHER</h2>
+                <ul>
+                    <li>Coconut Water</li>
+                    <li>Tahini</li>
+                    <li>Dijon Mustard</li>
+                    <li>Hummus</li>
+                    <li>Guacamole</li>
+                    <li>Salsa</li>
+                    <li>Tofu</li>
+                    <li>Tempeh</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

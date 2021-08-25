@@ -1,0 +1,317 @@
+﻿@page "/BeachBodyChallenge"
+
+
+<font face="'Comic Sans MS'" size="8" color="white"> 30 Day Beach Body Challenge </font>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS',Verdana;
+            background-image: url("https://image.freepik.com/free-photo/top-view-red-weights-with-sneakers-copy-space_23-2148523332.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position-x: right;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 20%;
+            padding: 10px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {
+            margin: 0 -5px;
+        }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        /* Responsive columns */
+        @@media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            text-align: center;
+            background-color: #f3f4f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 1 </h3>
+                <p>20 JUMPING JACKS</p>
+                <p>10 SIT UPS</p>
+                <p>10 SQUATS</p>
+                <p>5 PUSH UPS</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 2 </h3>
+                <p>20 HIGH KNEES</p>
+                <p>10 SECOND PLANK</p>
+                <p>10 LUNGES</p>
+                <p>5 PUSH UPS</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 3 </h3>
+                <p>20 JUMPING JACKS</p>
+                <p>10 SIT UPS</p>
+                <p>10 SQUATS</p>
+                <p>6 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 4 </h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 5</h3>
+                <p>20 HIGH KNEES</p>
+                <p>10 SECOND PLANK</p>
+                <p>10 LUNGES</p>
+                <p>6 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 6</h3>
+                <p>25 JUMPING JACKS</p>
+                <p>12 SIT UPS</p>
+                <p>12 SQUATS</p>
+                <p>7 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 7</h3>
+                <p>25 HIGH KNEES</p>
+                <p>12 SECOND PLANK</p>
+                <p>12 LUNGES</p>
+                <p>8 PUSH UPS</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 8</h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 9</h3>
+                <p>25 JUMPING JACKS</p>
+                <p>14 SIT UPS</p>
+                <p>14 SQUATS</p>
+                <p>8 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 10</h3>
+                <p>25 HIGH KNEES</p>
+                <p>14 SECOND PLANK</p>
+                <p>14 LUNGES</p>
+                <p>9 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 11</h3>
+                <p>30 JUMPING JACKS</p>
+                <p>16 SIT UPS</p>
+                <p>16 SQUATS</p>
+                <p>10 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 12</h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 13</h3>
+                <p>30 HIGH KNEES</p>
+                <p>16 SECOND PLANK</p>
+                <p>16 LUNGES</p>
+                <p>10 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 14</h3>
+                <p>30 JUMPING JACKS</p>
+                <p>18 SIT UPS</p>
+                <p>18 SQUATS</p>
+                <p>11 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 15</h3>
+                <p>30 HIGH KNEES</p>
+                <p>18 SECOND PLANK</p>
+                <p>18 LUNGES</p>
+                <p>12 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 16</h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 17</h3>
+                <p>35 JUMPING JACKS</p>
+                <p>20 SIT UPS</p>
+                <p>20 SQUATS</p>
+                <p>12 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 18</h3>
+                <p>35 HIGH KNEES</p>
+                <p>20 SECOND PLANK</p>
+                <p>20 LUNGES</p>
+                <p>13 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 19</h3>
+                <p>35 JUMPING JACKS</p>
+                <p>22 SIT UPS</p>
+                <p>22 SQUATS</p>
+                <p>14 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 20</h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                ">
+                <h3>DAY 21</h3>
+                <p>35 HIGH KNEES</p>
+                <p>22 SECOND PLANK</p>
+                <p>22 LUNGES</p>
+                <p>14 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 22</h3>
+                <p>40 JUMPING JACKS</p>
+                <p>24 SIT UPS</p>
+                <p>24 SQUATS</p>
+                <p>15 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 23</h3>
+                <p>40 HIGH KNEES</p>
+                <p>24 SECOND PLANK</p>
+                <p>24 LUNGES</p>
+                <p>16 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 24</h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 25</h3>
+                <p>40 JUMPING JACKS</p>
+                <p>26 SIT UPS</p>
+                <p>26 SQUATS</p>
+                <p>16 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 26</h3>
+                <p>40 HIGH KNEES</p>
+                <p>26 SECOND PLANK</p>
+                <p>26 LUNGES</p>
+                <p>17 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 27</h3>
+                <p>45 JUMPING JACKS</p>
+                <p>28 SIT UPS</p>
+                <p>28 SQUATS</p>
+                <p>18 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 28</h3>
+                <p>REST DAY</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFDAB9;">
+                <h3>DAY 29</h3>
+                <p>45 HIGH KNEES</p>
+                <p>28 SECOND PLANK</p>
+                <p>28 LUNGES</p>
+                <p>18 PUSH UPS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-color: #FFEFD5;">
+                <h3>DAY 30</h3>
+                <p>50 JUMPING JACKS</p>
+                <p>30 SIT UPS</p>
+                <p>30 SQUATS</p>
+                <p>19 PUSH UPS</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

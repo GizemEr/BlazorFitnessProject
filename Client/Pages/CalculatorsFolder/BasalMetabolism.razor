@@ -1,0 +1,100 @@
+﻿@page "/BasalMetabolismCalculator"
+@using Blazorapp.Shared.Models
+@using Blazorapp.Client.Pages.Enums
+
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1517260739337-6799d239ce83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position-x: right 32px;
+        }
+    </style>
+  
+<div id="content">
+
+    <div id="maintenance-calculator" class="calculator">
+
+        <div class="flex-container">
+            <label for="Height">Height</label>
+            <input type="range" min="80" max="240" step="0,5" class="slider" @bind-value="Basal.Height" />
+            <p>@Basal.Height</p>
+        </div>
+
+        <div class="flex-container">
+            <label for="Weight">Weight</label>
+            <input type="range" min="30" max="150" step="0,5" class="slider" @bind-value="Basal.Weight"  />
+            <p>@Basal.Weight</p>
+        </div>
+
+        <div class="flex-container">
+            <label for="Age">Age</label>
+            <input type="range" min="18" max="99" step="1" class="slider" @bind-value="Basal.Age" />
+            <p>@Basal.Age</p>
+        </div>
+        <div class="flex-container">
+            <label for="@Basal.Gender">Gender</label>
+            <select @bind="@Basal.Gender" id="Gender">
+                <option value="0"> Bir secenek seciniz</option>
+                <option value="@((int)Gender.Male)">Male</option>
+                <option value="@((int)Gender.Female)">Female</option>
+            </select>
+        </div>
+
+        <p id="maintenance-message" style="color:@maintenanceMessageColor">@maintenanceMessage</p>
+
+        <div class="flex-container">
+            <label for="Result">Result</label>
+            <input type="text" readonly id="Result" value="@Basal.Maintenance" />
+        </div>
+
+        <div class="flex-container">
+            <button @onclick="() => Calculate()">Result</button>
+        </div>
+
+    </div>
+</div>
+@code { private const string green = "#1c7c00";
+    private const string red = "#ff0000";
+
+    private string maintenanceMessage = "";
+
+    private string maintenanceMessageColor = "";
+
+    private CaloricData Basal = new CaloricData();
+
+    private void Calculate()
+    {
+        if (Basal.Weight > 0 && Basal.Height > 0 && Basal.Age > 0)
+        {
+            maintenanceMessageColor = green;
+            maintenanceMessage = "";
+
+            switch (Basal.Gender)
+            {
+                case (int)Enums.Gender.Male:
+
+                    var maleResult = Math.Round((9.6 * Basal.Weight) + (1.8 * Basal.Height) - (4.7 * Basal.Age) + 655).ToString();
+                    int.TryParse(maleResult, out int maleValue);
+                    Basal.Maintenance = maleValue;
+                    break;
+
+                case (int)Enums.Gender.Female:
+                    var femaleResult = Math.Round((13.7 * Basal.Weight) + (5 * Basal.Height) - (6.7 * Basal.Age) + 66.5).ToString();
+                    int.TryParse(femaleResult, out int femaleValue);
+                    Basal.Maintenance = femaleValue;
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            maintenanceMessageColor = red;
+            maintenanceMessage = "Invalid Inputs detected";
+            Basal.Maintenance = 0;
+        }
+    }
+ }

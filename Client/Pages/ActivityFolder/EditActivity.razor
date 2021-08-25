@@ -1,0 +1,42 @@
+﻿@page "/EditActivity/{Id}"
+@page  "/EditActivity"
+@inject HttpClient http
+@inject NavigationManager nm
+@inject IJSRuntime js
+@using Blazorapp.Shared.Models
+
+<h3>Edit</h3>
+<Blazorapp.Client.Pages.ActivityFolder.ActivityForm ButtonText="Edit" act="act" OnValidSubmit="@( () => Edit())" />
+
+@code { [Parameter] public string Id { get; set; }
+
+    Activity act = new Activity();
+
+    protected async override Task OnParametersSetAsync()
+    {
+        act = await http.GetFromJsonAsync<Activity>($"api/Activities/{Id}");
+        act.TotalCalorie = CalculateCalorie(act.ActivityFeatureNavigation.Point, act.Hour);
+    }
+
+    async Task Edit()
+    {
+        await http.PutAsJsonAsync($"api/Activities/{Id}", act);
+        await js.InvokeVoidAsync("alert", $"Updated Successfully!");
+        nm.NavigateTo("ActivityList");
+    }
+    double CalculateCalorie(double point, double hours)
+    {
+        double level = 0;
+        level += (point * hours);
+
+        if (hours > 24)
+        {
+            Console.Write("time is more than 24 hours");
+        }
+        level += (24 - hours) * 1.2;
+        level /= 24;
+        return (level - 1) * 1020;
+
+    }
+
+ }

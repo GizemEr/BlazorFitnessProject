@@ -1,0 +1,110 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Blazorapp</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+      <li class="nav-item px-3">
+    <NavLink class="nav-link" href="" @onclick="()=>expandSubMenu0=! expandSubMenu0">
+        <span class="" aria-hidden="true"></span> ACTIVITY DIARY
+    </NavLink>
+    @if (expandSubMenu0)
+    {
+<NavLink class="expand-menu" href="ActivityList">
+    <span class="" aria-hidden="true"></span>Activity Diary
+</NavLink>
+                <NavLink class="expand-menu" href="NewActivity">
+                    <span class="" aria-hidden="true"></span> Add New Activity
+                </NavLink>            }
+</li>
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" @onclick="()=>expandSubMenu1=! expandSubMenu1">
+                <span class="" aria-hidden="true"></span> CALCULATORS
+            </NavLink>
+            @if (expandSubMenu1)
+            {
+    <NavLink class="expand-menu" href="DailyCalorieCalculator">
+        <span class="" aria-hidden="true"></span> Daily Calorie Requirement
+    </NavLink>
+                    <NavLink class="expand-menu" href="BodyMassIndexCalculator">
+                        <span class="" aria-hidden="true"></span> Body Mass Index
+                    </NavLink>
+                                    <NavLink class="expand-menu" href="BodyFatPercentageCalculator">
+                                        <span class="" aria-hidden="true"></span> Body Fat Percentage
+                                    </NavLink>
+                                                    <NavLink class="expand-menu" href="BasalMetabolismCalculator">
+                                                        <span class="" aria-hidden="true"></span> Basal Metabolism
+                                                    </NavLink>}
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" @onclick="()=>expandSubMenu2=! expandSubMenu2">
+                <span class="" aria-hidden="true"></span> 30 DAY CHALLENGES
+            </NavLink>
+            @if (expandSubMenu2)
+            {
+    <NavLink class="expand-menu" href="Abchallengeforaflattummy">
+        <span class="" aria-hidden="true"></span>ABS Challenge
+    </NavLink>
+                    <NavLink class="expand-menu" href="TagePoChallenge">
+                        <span class="" aria-hidden="true"></span> Tage Po Challenge
+                    </NavLink>
+                                    <NavLink class="expand-menu" href="TighSlimmingChallenge">
+                                        <span class="" aria-hidden="true"></span> Tigh Slimming Challenge
+                                    </NavLink>
+                                                    <NavLink class="expand-menu" href="BeachBodyChallenge">
+                                                        <span class="" aria-hidden="true"></span> Beach Body Challenge
+                                                    </NavLink>
+                                                                    <NavLink class="expand-menu" href="StrongArmsChallenge">
+                                                                        <span class="" aria-hidden="true"></span> Strong Arms Challenge
+                                                                    </NavLink>}
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" @onclick="()=>expandSubMenu3=! expandSubMenu3">
+                <span class="" aria-hidden="true"></span>  SHOPPING LISTS
+            </NavLink>
+            @if (expandSubMenu3)
+            {
+        <NavLink class="expand-menu" href="Veganlist">
+            <span class="" aria-hidden="true"></span> Vegan Foods List
+        </NavLink>
+                        <NavLink class="expand-menu" href="Pescatarianlist">
+                            <span class="" aria-hidden="true"></span> Pescatarian Foods List
+                        </NavLink>
+                                        <NavLink class="expand-menu" href="GlutenFreelist">
+                                            <span class="" aria-hidden="true"></span> GlutenFree Foods List
+                                        </NavLink>
+                                        <NavLink class="expand-menu" href="Mediterraneanlist">
+                                            <span class="" aria-hidden="true"></span> Mediterranean Foods List
+                                        </NavLink> 
+                                                        <NavLink class="expand-menu" href="Ketolist">
+                                                            <span class="" aria-hidden="true"></span> Keto Foods List
+                                                        </NavLink>
+                                                        <NavLink class="expand-menu" href="CarbFoodlist">
+                                                            <span class="" aria-hidden="true"></span> Low Carb Food List
+                                                        </NavLink>
+                                                        }
+        </li>
+    </ul>
+</div>
+
+
+@code { private bool collapseNavMenu = true;
+    private bool expandSubMenu0;
+    private bool expandSubMenu1;
+    private bool expandSubMenu2;
+    private bool expandSubMenu3;
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    } }

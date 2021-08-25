@@ -1,0 +1,68 @@
+﻿@page "/NewActivity"
+@using Blazorapp.Shared.Models
+@inject IJSRuntime jsRuntime
+@inject NavigationManager nm
+@inject HttpClient http
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<Blazorapp.Client.Pages.ActivityFolder.ActivityForm act="@act" OnValidSubmit="@Add" ButtonText="Create" />
+
+
+@code{
+
+    Activity act= new Activity();
+    List<ActivityValue> values;
+
+    async Task Add()
+    {
+        var navigation = values.Where(c => c.Id == act.ActivityFeature).FirstOrDefault();
+        act.UserId = _userId;
+        act.TotalCalorie = CalculateCalorie(navigation.Point, act.Hour);
+        await http.PostAsJsonAsync<Activity>("api/Activities", act);
+        nm.NavigateTo("ActivityList");
+    }
+
+
+    private string _userId;
+    private AspNetUsers _username;
+    private string name;
+    private IEnumerable<Claim> _claims = Enumerable.Empty<Claim>();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        values = await http.GetFromJsonAsync<List<ActivityValue>>("api/ActivityValues");
+        await GetClaimsPrincipalData();
+        await base.OnParametersSetAsync();
+    }
+
+    private async Task GetClaimsPrincipalData()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            _claims = user.Claims;
+            _userId = $"{user.FindFirst(c => c.Type == "sub")?.Value}";
+        }
+    }
+
+
+    double CalculateCalorie(double point, double hours)
+    {
+        double level = 0;
+        level += (point * hours) ;
+
+        if (hours> 24)
+        {
+            Console.Write("time is more than 24 hours");
+        }
+        level += (24 - hours) * 1.2;
+        level /= 24;
+        return (level - 1) * 1020;
+
+    }
+
+
+     }

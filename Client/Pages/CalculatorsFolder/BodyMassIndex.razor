@@ -1,0 +1,96 @@
+﻿@page "/BodyMassIndexCalculator"
+@using Blazorapp.Shared.Models
+@using Blazorapp.Client.Pages.Enums
+<style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1487376480913-24046456a727?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80 ");
+        background-repeat: no-repeat;
+        background-size: 85% 100%;
+        background-position-x: right;
+    }
+</style>
+
+
+<div id="calories-content">
+
+    <div id="maintenance-calculator" class="calculator">
+
+        <div class="flex-container">
+            <label for="Height">Height</label>
+            <input type="range" min="80" max="240" step="0,5" class="slider" @bind-value="BMI.Height"  />
+            <p>@BMI.Height</p>
+        </div>
+
+        <div class="flex-container">
+            <label for="Weight">Weight</label>
+            <input type="range" min="30" max="150" step="0,5" class="slider" @bind-value="BMI.Weight"  />
+            <p>@BMI.Weight</p>
+        </div>
+
+        <div class="flex-container">
+            <label for="@BMI.Gender">Gender</label>
+            <select @bind="@BMI.Gender" id="Gender">
+                <option value="0"> Bir secenek seciniz</option>
+                <option value="@((int)Gender.Male)">Male</option>
+                <option value="@((int)Gender.Female)">Female</option>
+            </select>
+        </div>
+
+        <p id="maintenance-message" style="color:@maintenanceMessageColor">@maintenanceMessage</p>
+
+        <div class="flex-container">
+            <label for="Result">Result</label>
+            <input type="text" readonly id="Result" bind=@BMI.Maintenance />
+        </div>
+
+        <div class="flex-container">
+            <button @onclick="() => Calculate()">Result</button>
+        </div>
+
+    </div>
+</div>
+@code { private const string green = "#1c7c00";
+    private const string red = "#ff0000";
+
+    private string maintenanceMessage = "";
+
+    private string maintenanceMessageColor = "";
+
+    private CaloricData BMI = new CaloricData();
+
+    private void Calculate()
+    {
+        if (BMI.Weight > 0 && BMI.Height > 0)
+        {
+            maintenanceMessageColor = green;
+            maintenanceMessage = "";
+
+            switch (BMI.Gender)
+            {
+                case (int)Enums.Gender.Male:
+
+                    var maleResult = ((BMI.Weight) / ((BMI.Height) * (BMI.Height) / 10000)).ToString();
+                    double.TryParse(maleResult, out double maleValue);
+                    BMI.Maintenance = maleValue;
+                    break;
+
+                case (int)Enums.Gender.Female:
+                    var femaleResult = ((BMI.Weight) / ((BMI.Height) * (BMI.Height) / 10000)).ToString();
+                    double.TryParse(femaleResult, out double femaleValue);
+                    BMI.Maintenance = femaleValue;
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            maintenanceMessageColor = red;
+            maintenanceMessage = "Invalid Inputs detected";
+            BMI.Maintenance = 0;
+        }
+    }
+
+  }

@@ -1,0 +1,27 @@
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.deps.json
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.dll
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.csprojAssemblyReference.cache
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.AssemblyInfoInputs.cache
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.AssemblyInfo.cs
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.pdb
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.dll
+C:\Users\SÜMEYRA\Desktop\project\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.pdb
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.deps.json
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.dll
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.pdb
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.csprojAssemblyReference.cache
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.AssemblyInfoInputs.cache
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.AssemblyInfo.cs
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.dll
+C:\Users\SÜMEYRA\Desktop\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.pdb
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.deps.json
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.dll
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\bin\Debug\netstandard2.1\Blazorapp.Shared.pdb
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.csprojAssemblyReference.cache
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.AssemblyInfoInputs.cache
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.AssemblyInfo.cs
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.dll
+C:\Users\Kemal\Desktop\Blazorapp (2)\Blazorapp\Shared\obj\Debug\netstandard2.1\Blazorapp.Shared.pdb

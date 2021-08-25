@@ -1,0 +1,260 @@
+﻿@page "/GlutenFreelist"
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+    body { font-family: 'Yanone Kaffeesatz', sans-serif; background-image: url("https://images.unsplash.com/photo-1484980859177-5ac1249fda6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1442&q=80");
+           background-repeat: no-repeat; 
+           background-size: 100% 100%; }
+
+        .header {
+            color: #161111;
+            text-align: center;
+            font-size: 35px;
+            text-decoration: underline rgb(49, 49, 49);
+        }
+
+        .column {
+            float: right;
+            width: 30%;
+            padding: 10px 10px;
+        }
+
+        .row {
+            margin: 10px 10px;
+        }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        @@media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .card {
+            margin: 1rem;
+            width: 300px;
+            height: 500px;
+            padding: .5rem 1rem;
+            background-image: url("https://images.unsplash.com/photo-1532153259564-a5f24f261f51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            color: rgba(255, 225, 170, 0.788);
+            border-radius: 8px;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .card:hover {
+                box-shadow: 3px 3px 3px 3px rgba(255, 225, 170, 0.788);
+            }
+
+        h1 {
+            font-family: 'Allura', cursive;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Vegan Gluten-Free Shopping List</title>
+</head>
+<body>
+    <div class="header">
+        <h2>The Ultimate Gluten-Free Shopping List</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">ALL BEANS</h2>
+                <ul>
+                    <li>Black Beans</li>
+                    <li>Cannellini Beans</li>
+                    <li>Chickpeas</li>
+                    <li>Kidney Beans</li>
+                    <li>Lima Beans</li>
+                    <li>Lentils</li>
+                    <li>Mung Beans</li>
+                    <li>Pinto Beans</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">ALL NUTS & SEEDS</h2>
+                <ul>
+                    <li>Almonds</li>
+                    <li>Chia Seeds</li>
+                    <li>Flaxseeds</li>
+                    <li>Hemp Seeds</li>
+                    <li>Peanuts</li>
+                    <li>Pecan</li>
+                    <li>Pistachios</li>
+                    <li>Pumpkin Seeds</li>
+                    <li>Sunflower Seeds</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">ALL VEGETABLES</h2>
+                <ul>
+                    <li>Avocado</li>
+                    <li>Asparagus</li>
+                    <li>Bell Pepper</li>
+                    <li>Broccoli</li>
+                    <li>Corn</li>
+                    <li>Cucumber</li>
+                    <li>Kale</li>
+                    <li>Lettuce</li>
+                    <li>Potatoes</li>
+                    <li>Sweet Potatoes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">ALL FRUITS</h2>
+                <ul>
+                    <li>Apple</li>
+                    <li>Apricot</li>
+                    <li>Banana</li>
+                    <li>Mandarin</li>
+                    <li>Orange</li>
+                    <li>Kiwifruit</li>
+                    <li>Watermelon</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">SPREADS</h2>
+                <ul>
+                    <li>Almond Butter</li>
+                    <li>Cashew Butter</li>
+                    <li>Peanut Butter</li>
+                    <li>Tahini</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FLOURS</h2>
+                <ul>
+                    <li>Almond Meal</li>
+                    <li>Arrowroot Flour</li>
+                    <li>Amaranth Flour</li>
+                    <li>Buckwheat Flour</li>
+                    <li>Brown Rice Flour</li>
+                    <li>Cassava Flour</li>
+                    <li>Chickpea Flour</li>
+                    <li>Chestnut Flour</li>
+                    <li>Coconut Flours</li>
+                    <li>Corn Flour)</li>
+                    <li>Chia Seed Flour</li>
+                    <li>Flaxseed Flour</li>
+                    <li>Millet Flour</li>
+                    <li>Potato Flour</li>
+                    <li>Tigernut Flour</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">MILK SUBSTITUTES</h2>
+                <ul>
+                    <li>Almond Milk</li>
+                    <li>Cashew Milk</li>
+                    <li>Coconut Milk</li>
+                    <li>Coconut Milk</li>
+                    <li>Hazelnut Milk</li>
+                    <li>Rice Milk</li>
+                    <li>Soy Milk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">CREAM SUBSTITUTES</h2>
+                <ul>
+                    <li>Coconut Cream</li>
+                    <li>Soy Cream</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">YOGHURT SUBSTITUTES</h2>
+                <ul>
+                    <li>Almond Yoghurt</li>
+                    <li>Coconut Yoghurt</li>
+                    <li>Soy Yoghurt</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">GRAINS</h2>
+                <ul>
+                    <li>Amaranth</li>
+                    <li>Brown Rice</li>
+                    <li>Buckwheat</li>
+                    <li>Cornmeal (Polenta)</li>
+                    <li>Millet</li>
+                    <li>Quinoa</li>
+                    <li>Rice</li>
+                    <li>Teff</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">SAUCES</h2>
+                <ul>
+                    <li>Coconut Aminos</li>
+                    <li>Hummus</li>
+                    <li>Liquid Smoke</li>
+                    <li>Mustard</li>
+                    <li>Tamari Sauce</li>
+                    <li>Tomato Sauce</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">SOY PRODUCTS</h2>
+                <ul>
+                    <li>Tofu</li>
+                    <li>Tempeh</li>
+                    <li>Edamame</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">OTHERS</h2>
+                <ul>
+                    <li>Nutritional Yeast</li>
+                    <li>Spirulina</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

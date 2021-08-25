@@ -1,0 +1,82 @@
+﻿@page "/ActivityList"
+@using Blazorapp.Shared.Models
+@inject HttpClient http
+@inject IJSRuntime jsRuntime
+@inject NavigationManager nm
+   
+<style>
+body { background-image: url("https://images.unsplash.com/photo-1531722569936-825d3dd91b15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); 
+       background-repeat: no-repeat; 
+       background-size: 85% 100%;
+       background-position-x: right; }
+.table { background-image: url("https://unsplash.com/photos/0tgMnMIYQ9Y"); color: #000000; }
+    </style>
+    <div class="page-header">
+        <h1 class="page-title text-primary-d2 w-100">
+            Activity Diary
+            <a href="NewActivity" class="float-right btn btn-secondary">Add</a>
+        </h1>
+
+
+    </div>
+    @if (activityList == null)
+    {
+<p><em>Loading...</em></p> }
+else
+{
+<div class="table-responsive">
+
+
+
+    <table class="table table-bordered table-hover" style="border-color: transparent;">
+        <thead class="thead-dark">
+            <tr>
+
+                <th>Menu</th>
+                <th>Activity</th>
+                <th>Hour</th>
+                <th>Date</th>
+                <th>Total Calorie</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Activity act in activityList)
+            {
+<tr>
+    <td>
+        <a class="btn btn-secondary" href="EditActivity/@act.Id">Edit</a>
+        <button class="btn btn-secondary" @onclick="@(() => Delete(@act.Id))">Delete</button>
+    </td>
+    <td>@act.ActivityFeatureNavigation.ActivityName</td>
+    <td>@act.Hour</td>
+    <td>@act.Date.GetValueOrDefault().ToShortDateString()</td>
+    <td>@string.Format("{0:F1}", @act.TotalCalorie)</td>
+
+
+</tr>
+}
+        </tbody>
+    </table>
+</div>}
+
+
+    @code { private Activity[] activityList;
+                private ActivityValue[] activityValues;
+
+                protected override async Task OnInitializedAsync()
+
+                {
+                    activityList = await http.GetFromJsonAsync<Activity[]>("api/Activities");
+                    activityValues = await http.GetFromJsonAsync<ActivityValue[]>("api/ActivityValues");
+                }
+
+
+
+
+                async Task Delete(int Id)
+                {
+                    await http.DeleteAsync($"api/Activities/{Id}");
+                    await OnInitializedAsync();
+
+                } }

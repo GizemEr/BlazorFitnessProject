@@ -1,0 +1,234 @@
+﻿@page "/Ketolist"
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+        body { font-family: 'Yanone Kaffeesatz', sans-serif; background-image: url("https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"); 
+               background-repeat: no-repeat;
+               background-size: 100% 100%; }
+
+            .header {
+                color: #161111;
+                text-align: center;
+                font-size: 35px;
+                text-decoration: underline rgb(49, 49, 49);
+            }
+
+            .column {
+                float: right;
+                width: 30%;
+                padding: 10px 10px;
+            }
+
+            .row {
+                margin: 10px 10px;
+            }
+
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+            @@media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .card {
+                margin: 1rem;
+                width: 300px;
+                height: 500px;
+                padding: .5rem 1rem;
+                background-image: url("https://images.unsplash.com/photo-1532153259564-a5f24f261f51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+                color: rgba(255, 225, 170, 0.788);
+                border-radius: 8px;
+                float: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .card:hover {
+                    box-shadow: 3px 3px 3px 3px rgba(255, 225, 170, 0.788);
+                }
+
+            h1 {
+                font-family: 'Allura', cursive;
+                color: rgb(0, 0, 0);
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Intro to a Keto Dıet</title>
+    </head>
+    <body>
+        <div class="header">
+            <h2>Intro to a Keto Dıet</h2>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">MEAT</h2>
+                    <ul>
+                        <li>Bacon</li>
+                        <li>Beef</li>
+                        <li>Beef Jerky</li>
+                        <li>Chicken</li>
+                        <li>Duck</li>
+                        <li>Goat</li>
+                        <li>Lamb</li>
+                        <li>Pork</li>
+                        <li>Poultry</li>
+                        <li>Rabbit</li>
+                        <li>Steak</li>
+                        <li>Turkey</li>
+                        <li>Veal</li>
+                        <li>Venison</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FISH & SHELLFISH</h2>
+                    <ul>
+                        <li>Cod</li>
+                        <li>Crab</li>
+                        <li>Halibut</li>
+                        <li>Lobster</li>
+                        <li>Mackerel</li>
+                        <li>Mussels</li>
+                        <li>Oysters</li>
+                        <li>Plaice</li>
+                        <li>Salmon</li>
+                        <li>Sardines</li>
+                        <li>Scallops</li>
+                        <li>Shrimps</li>
+                        <li>Trout</li>
+                        <li>Tuna</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">NUTS&SEEDS</h2>
+                    <ul>
+                        <li>Almonds</li>
+                        <li>Brazil Nuts</li>
+                        <li>Hazelnuts</li>
+                        <li>Macadamia Nuts</li>
+                        <li>Pecans</li>
+                        <li>Pine Nuts</li>
+                        <li>Walnuts</li>
+                        <li>Flaxseed</li>
+                        <li>Hemp Seeds</li>
+                        <li>Pumpkin Seeds</li>
+                        <li>Sesame Seeds</li>
+                        <li>Sunflower Seeds</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FRUITS</h2>
+                    <ul>
+                        <li>Avocado</li>
+                        <li>Berries</li>
+                        <li>Coconut</li>
+                        <li>Lime</li>
+                        <li>Lemon</li>
+                        <li>Olives</li>
+                        <li>Rhubarb</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FLOUR</h2>
+                    <ul>
+                        <li>Almond Flour</li>
+                        <li>Coconut Flour</li>
+                        <li>Psyllium Husk</li>
+                        <li>Other Nut Flours</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">DRINKS</h2>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>All Teas</li>
+                        <li>Broth Broth</li>
+                        <li>Lemon&lime Juice</li>
+                        <li>Water</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FATS</h2>
+                    <ul>
+                        <li>Avocado Oil</li>
+                        <li>Beef tallow</li>
+                        <li>Butter</li>
+                        <li>Cocoa Butter</li>
+                        <li>Coconut Butter</li>
+                        <li>Coconut Oil</li>
+                        <li>Duck Fat</li>
+                        <li>Olive Oil</li>
+                        <li>Ghee</li>
+                        <li>Goose Fat</li>
+                        <li>Lard</li>
+                        <li>Macadamia</li>
+                        <li>Mayonnaise</li>
+                        <li>MCT Oil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">VEGGIES</h2>
+                    <ul>
+                        <li>Artichokes</li>
+                        <li>Broccoli</li>
+                        <li>Brussel Sprouts</li>
+                        <li>Cabbage</li>
+                        <li>Cauliflower</li>
+                        <li>Cucumber</li>
+                        <li>Garlic</li>
+                        <li>Green Beans</li>
+                        <li>Kimchi</li>
+                        <li>Lettuce</li>
+                        <li>Mushrooms</li>
+                        <li>Onions</li>
+                        <li>Pumpkin</li>
+                        <li>Spinach</li>
+                        <li>Tomatoes</li>
+                        <li>Zucchini</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">DAIRY</h2>
+                    <ul>
+                        <li>Butter</li>
+                        <li>Ghee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

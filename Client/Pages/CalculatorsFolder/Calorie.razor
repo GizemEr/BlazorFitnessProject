@@ -1,0 +1,109 @@
+﻿@page "/DailyCalorieCalculator"
+@using Blazorapp.Shared.Models
+@using Blazorapp.Client.Pages.Enums
+
+<style>
+body { background-image: url("https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80 ");
+       background-repeat: no-repeat; 
+       background-size: 85% 100%; 
+       background-position-x: right; }
+</style>
+<h1>Estimated Calorie Requirements></h1>
+<div id="calories-content">
+</div>
+
+<div id="maintenance-calculator" class="calculator">
+
+    <div class="flex-container">
+        <label for="Height">Height</label>
+        <input type="range" min="30" max="240" step="0,5" class="slider" @bind-value="caloricData.Height"  />
+        <p>@caloricData.Height</p>
+    </div>
+
+    <div class="flex-container">
+        <label for="Weight">Weight</label>
+        <input type="range" min="20" max="200" step="0,5" class="slider" @bind-value="caloricData.Weight" />
+        <p>@caloricData.Weight</p>
+    </div>
+
+    <div class="flex-container">
+        <label for="Age">Age</label>
+        <input type="range" min="18" max="99" step="1" class="slider" @bind-value="caloricData.Age" />
+        <p>@caloricData.Age</p>
+    </div>
+
+    <div class="flex-container">
+        <label for="@caloricData.Gender">Gender</label>
+        <select @bind="@caloricData.Gender" id="Gender">
+            <option value="0"> Bir secenek seciniz</option>
+            <option value="@((int)Gender.Male)">Male</option>
+            <option value="@((int)Gender.Female)">Female</option>
+        </select>
+    </div>
+
+</div>
+<p id="maintenance-message" style="color:@maintenanceMessageColor">@maintenanceMessage</p>
+
+<div class="flex-container">
+    <label for="Result">Result</label>
+    <input type="text" readonly id="Result" value="@caloricData.Maintenance" />
+</div>
+
+<div class="flex-container">
+    <button @onclick="() => OnCalculateMaintenanceClick()">Result</button>
+</div>
+
+
+<div id="pal-calculator" class="calculator">
+</div>
+
+@code{ private const string green = "#1c7c00";
+    private const string red = "#ff0000";
+    private string palMessage = "";
+    private string maintenanceMessage = "";
+
+    private string maintenanceMessageColor = "";
+    private string palMessageColor = "";
+
+    private bool palButtonDisabled => caloricData.Maintenance == 0;
+    private CaloricData caloricData = new CaloricData();
+
+
+
+
+
+    private void OnCalculateMaintenanceClick()
+    {
+        if (caloricData.Weight > 0 && caloricData.Height > 0 && caloricData.Age > 0)
+        {
+            maintenanceMessageColor = green;
+            maintenanceMessage = "";
+
+            switch (caloricData.Gender)
+            {
+                case (int) Enums.Gender.Male:
+
+                    var maleResult = Math.Round((9.99 * caloricData.Weight) + (6.25 * caloricData.Height) - (4.92 * caloricData.Age) + 5).ToString();
+                    int.TryParse(maleResult, out int maleValue);
+                    caloricData.Maintenance = maleValue;
+                    break;
+
+                case (int) Enums.Gender.Female:
+                    var femaleResult = Math.Round((9.99 * caloricData.Weight) + (6.25 * caloricData.Height) - (4.92 * caloricData.Age) - 161).ToString();
+                    int.TryParse(femaleResult, out int femaleValue);
+                    caloricData.Maintenance = femaleValue;
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            maintenanceMessageColor = red;
+            maintenanceMessage = "Invalid Inputs detected";
+            caloricData.Maintenance = 0;
+        }
+    }
+    }

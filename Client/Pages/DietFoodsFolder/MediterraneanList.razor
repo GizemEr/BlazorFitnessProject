@@ -1,0 +1,279 @@
+﻿
+@page "/Mediterraneanlist"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1543364195-077a16c30ff3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position-x: right;
+        }
+
+        .header {
+            color: #161111;
+            text-align: center;
+            font-size: 35px;
+            text-decoration: underline rgb(49, 49, 49);
+        }
+
+        .column {
+            float: right;
+            width: 30%;
+            padding: 10px 10px;
+        }
+
+        .row {
+            margin: 10px 10px;
+        }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        @@media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .card {
+            margin: 1rem;
+            width: 300px;
+            height: 500px;
+            padding: .5rem 1rem;
+            background-image: url("https://images.unsplash.com/photo-1532153259564-a5f24f261f51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            color: rgba(255, 225, 170, 0.788);
+            border-radius: 8px;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .card:hover {
+                box-shadow: 3px 3px 3px 3px rgba(255, 225, 170, 0.788);
+            }
+
+        h1 {
+            font-family: 'Allura', cursive;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Mediterranean Dıet Food List</title>
+</head>
+<body>
+    <div class="header">
+        <h2>Mediterranean Dıet Food List</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">OLIVE OILS,OLIVES,VINEGARS</h2>
+                <ul>
+                    <li>Extra Virgin Olive Oil</li>
+                    <li>Olives</li>
+                    <li>Balsamic Vinegar</li>
+                    <li>Red Wine Vinegar</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">VEGETABLES</h2>
+                <ul>
+                    <li>Onions</li>
+                    <li>Garlic</li>
+                    <li>Potatoes</li>
+                    <li>Eggplant</li>
+                    <li>Corn</li>
+                    <li>Cucumbers</li>
+                    <li>Broccoli</li>
+                    <li>Mushrooms</li>
+                    <li>Carrots</li>
+                    <li>Celery</li>
+                    <li>Peppers</li>
+                    <li>Fennel</li>
+                    <li>Cabbage</li>
+                    <li>Leeks</li>
+                    <li>Zucchini</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">NUTS&SEEDS</h2>
+                <ul>
+                    <li>Pine Nuts</li>
+                    <li>Walnuts</li>
+                    <li>Almonds</li>
+                    <li>Chesnuts</li>
+                    <li>Sesame Seeds</li>
+                    <li>Pumpkin Seeds</li>
+                    <li>Sunflower Seeds</li>
+                    <li>Tahini</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">HERBS&SPICES</h2>
+                <ul>
+                    <li></li>
+                    <li>Parsley</li>
+                    <li>Oregano</li>
+                    <li>Basil</li>
+                    <li>Dill</li>
+                    <li>Thyme</li>
+                    <li>Sage</li>
+                    <li>Rosemary</li>
+                    <li>Mint</li>
+                    <li>Bay Leaves</li>
+                    <li>Salt</li>
+                    <li>Pepper</li>
+                    <li>Ginger</li>
+                    <li>Saffron</li>
+                    <li>Paprika</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">BEANS&LEGUMES</h2>
+                <ul>
+                    <li>Lentils</li>
+                    <li>Split Peas</li>
+                    <li>Broad Beans</li>
+                    <li>Chickpeas</li>
+                    <li>Kidney Beans</li>
+                    <li>Green Beans</li>
+                    <li>Black Beans</li>
+                    <li>Black Eyed Beans</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">CHEESE&FERMENTED DAIRY</h2>
+                <ul>
+                    <li>Feta Cheese</li>
+                    <li>Mozzarella</li>
+                    <li>Parmesan</li>
+                    <li>Ricotta</li>
+                    <li>Yogurt</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">GREENS</h2>
+                <ul>
+                    <li>Spinach</li>
+                    <li>Arugula</li>
+                    <li>Lettuce</li>
+                    <li>Kale</li>
+                    <li>Purslane</li>
+                    <li>Broccoli Rabe</li>
+                    <li>Beet Greens</li>
+                    <li>Collard Greens</li>
+                    <li>Dandelion Greens</li>
+                    <li>Mustard Greens</li>
+                    <li>Turnip Greens</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FRUIT</h2>
+                <ul>
+                    <li>Grapes</li>
+                    <li>Tomatoes</li>
+                    <li>Lemons</li>
+                    <li>Oranges</li>
+                    <li>Grapefruit</li>
+                    <li>Apricots</li>
+                    <li>Apples</li>
+                    <li>Pears</li>
+                    <li>Pomegranate</li>
+                    <li>Cherries</li>
+                    <li>Avocado</li>
+                    <li>Watermelon</li>
+                    <li>Honeydew</li>
+                    <li>Peaches</li>
+                    <li>Strawberries</li>
+                    <li>Kiwi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">WHOLE GRAINS,RICE&PASTA</h2>
+                <ul>
+                    <li>Whole Wheat</li>
+                    <li>Bulgur Wheat</li>
+                    <li>Quinoa</li>
+                    <li>Rice</li>
+                    <li>Orzo</li>
+                    <li>Pasta</li>
+                    <li>Barley</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">GRASS FED</h2>
+                <ul>
+                    <li>Grass Fed Beef</li>
+                    <li>Grass Fed Pork</li>
+                    <li>Grass Fed Chicken</li>
+                    <li>Organic Eggs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">FISH&SEAFOOD</h2>
+                <ul>
+                    <li>Sardines and Anchovies</li>
+                    <li>Salmon</li>
+                    <li>Sea Bass</li>
+                    <li>Cod</li>
+                    <li>Halibut</li>
+                    <li>Tuna</li>
+                    <li>Mussels and Clams</li>
+                    <li>Shrimps and Prawns</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2 style="font-family: 'Allura', cursive; color: rgb(0, 0, 0);">DRINKS</h2>
+                <ul>
+                    <li>Water</li>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Wine</li>
+                    <li>Moonshine</li>
+                    <li>Fresh juice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
